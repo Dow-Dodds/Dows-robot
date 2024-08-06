@@ -8,11 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        background: 'hsl(30, 24%, 92%)',
+        orange: 'hsl(14, 75%, 54%)',
+        bluegrey: 'hsl(186, 18%, 70%)',
+        black: 'hsl(0, 0%, 13%)',
+        border: 'hsl(30, 24%, 92%)',
       },
+      fontFamily: {
+        headings: ["Montserrat", "sans-serif"],
+       
+      }, 
     },
   },
   plugins: [],
