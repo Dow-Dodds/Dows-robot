@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+
 import { FaLocationArrow } from "react-icons/fa";
 
 
@@ -7,7 +9,7 @@ const Footer = () => {
     <footer id="contact" className="w-full bg-black pt-8 mt-8 item-center">
     <div className='flex flex-col items-center'>
         <h2 className='heading text-base text-white'>
-            Let's Chat!
+            Let&apos;s Chat!
         </h2>
         <p className="py-10 text-center text-white">I hope you liked my App, please drop me a line below to get in touch</p>
         <a href="mailto:dowdodds@gmail.com">
@@ -28,7 +30,7 @@ const Footer = () => {
                 saturate-180 bg-opacity-75 rounded-lg 
                 border border-black hover:cursor-pointer hover:opacity-80'>
                 <a href="https://github.com/Dow-Dodds">
-                    <img src="/git.svg" 
+                    <Image src="/git.svg" 
                     alt="github"
                     width={20}
                     height={20} 
@@ -41,7 +43,7 @@ const Footer = () => {
                 saturate-180 bg-opacity-75 rounded-lg 
                 border border-black hover:cursor-pointer hover:opacity-80'>
                 <a href="https://www.linkedin.com/in/dowdodds/">
-                    <img src="/link.svg" 
+                    <Image src="/link.svg" 
                     alt="linked in"
                     width={20}
                     height={20}  

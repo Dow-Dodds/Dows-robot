@@ -49,7 +49,7 @@ const Home: React.FC = () => {
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Hero />
       <div className="px-20 pb-8">
-        <h2>Lets Go!</h2>
+        <h2>Let&apos;s Go!</h2>
         <p className='text-center'>Use the rotate buttons to determine the direction of the Robot by its antenna. Then press move forward to move him across a square</p>
       </div>
       <div className="relative p-10 bg-white br_shadow-button">
