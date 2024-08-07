@@ -15,8 +15,12 @@
     @apply font-headings font-bold text-center;
   } 
 
+
   p {
     @apply font-headings font-light;
+  }
+  button {
+    @apply font-headings rounded hover:opacity-80 hover:cursor-pointer br_shadow-button py-2 px-4;
   }
 }
 
@@ -24,5 +28,13 @@
   .heading {
     @apply text-4xl md:text-5xl;
   }
+
+  .br_shadow-button {
+    --tw-shadow: 0 27px 15px -30px rgba(0, 0, 0, .3), 0px 11px 9px -10px rgba(0, 0, 0, .5);
+    --tw-shadow-colored: 0 27px 15px -30px var(--tw-shadow-color), 0px 11px 9px -10px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  
+ 
 }
 

@@ -14,11 +14,18 @@ const config: Config = {
         bluegrey: 'hsl(186, 18%, 70%)',
         black: 'hsl(0, 0%, 13%)',
         border: 'hsl(30, 24%, 92%)',
+        white: 'hsl(60, 0%, 97%)',
       },
       fontFamily: {
         headings: ["Montserrat", "sans-serif"],
        
       }, 
+      rotate: {
+        '0': '0deg',
+        '90': '90deg',
+        '180': '180deg',
+        '270': '270deg',
+      },
     },
   },
   plugins: [],
