@@ -29,26 +29,35 @@ const Home: React.FC = () => {
     });
   };
 
-  const rotate = () => {
+  const rotateLeft = () => {
+    setDirection((prev) => {
+      const directions = ['N', 'W', 'S', 'E'];
+      const currentIndex = directions.indexOf(prev);
+      return directions[(currentIndex + 1) % 4] as 'N' | 'E' | 'S' | 'W';
+    });
+  };
+
+  const rotateRight = () => {
     setDirection((prev) => {
       const directions = ['N', 'E', 'S', 'W'];
       const currentIndex = directions.indexOf(prev);
       return directions[(currentIndex + 1) % 4] as 'N' | 'E' | 'S' | 'W';
     });
-  };
+  }; 
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Hero />
       <div className="px-20 pb-8">
         <h2>Lets Go!</h2>
-        <p className='text-center'>Use the rotate button to determine the direction of the Robot by its antenna. Then press move forward to move him across a square</p>
+        <p className='text-center'>Use the rotate buttons to determine the direction of the Robot by its antenna. Then press move forward to move him across a square</p>
       </div>
       <div className="relative p-10 bg-white br_shadow-button">
         <Grid />
         <Robot x={position.x} y={position.y} direction={direction} />
-        <Controls onMove={moveForward} onRotate={rotate} />
       </div>
+      <Controls onMove={moveForward} onRotateLeft={rotateLeft} onRotateRight={rotateRight}/>
+
       <Footer></Footer>
     </main>
   );

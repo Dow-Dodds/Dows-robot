@@ -2,10 +2,12 @@ import React from 'react';
 
 type Props = {
   onMove: () => void;
-  onRotate: () => void;
+  onRotateLeft: () => void;
+  onRotateRight: () => void;
+
 };
 
-const Controls: React.FC<Props> = ({ onMove, onRotate }) => {
+const Controls: React.FC<Props> = ({ onMove, onRotateLeft, onRotateRight}) => {
   return (
     <div className="mt-4 space-x-2 flex justify-center">
       <button
@@ -15,11 +17,19 @@ const Controls: React.FC<Props> = ({ onMove, onRotate }) => {
         Move Forward
       </button>
       <button
-        onClick={onRotate}
+        onClick={onRotateLeft}
         className=" bg-black text-white "
       >
-        Rotate
+        Rotate Left
       </button>
+
+      <button
+        onClick={onRotateRight}
+        className=" bg-black text-white "
+      >
+        Rotate Right
+      </button>
+      
     </div>
   );
 };
